@@ -33,7 +33,19 @@ namespace Assignment
 
         public int[] LCT02_BubbleSortAscending(int[] numbers)
         {
+            for (int i = 0; i < numbers.Length - 1; i++)
+            {
+                for (int j = 0; j < numbers.Length - 1; j++)
+                {
+                    if(numbers[j] < numbers[j+1])
+                    {
+                        (numbers[j], numbers[j + 1] = (numbers[j + 1], numbers[j]);
+                    }
+                }
+            }
+
             return numbers;
+
         }
 
         public int[] LCT03_InsertionSortAscending(int[] numbers)
