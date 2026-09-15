@@ -11,6 +11,23 @@ namespace Assignment
         #region Lecture
         public int[] LCT01_SelectionSortAscending(int[] numbers)
         {
+            for (int i = 0; i < numbers.Length - 1; i++)
+            {
+                int minIndex = i;
+                for (int j = i + 1; j < numbers.Length; j++)
+                {
+                    if (numbers[j] < numbers[minIndex])
+                    {
+                        minIndex = j;
+                    }
+                }
+
+                //int team = numbers[minIndex];
+                //numbers[minIndex] = numbers[i]; 
+                //numbers[i] = team;
+
+                (numbers[i], numbers[minIndex]) = (numbers[minIndex], numbers[i]);
+            }
             return numbers;
         }
 
@@ -21,6 +38,7 @@ namespace Assignment
 
         public int[] LCT03_InsertionSortAscending(int[] numbers)
         {
+
             return numbers;
         }
 
